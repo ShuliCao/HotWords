@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>词语解释</title>
+
+		<meta name="description" content="Common UI Features &amp; Elements" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="assets/css/ace.min.css" id="main-ace-style" />
+	</head>
+
+	<body class="no-skin">
+		<div id="navbar" class="navbar navbar-default">
+			<div class="navbar-container" id="navbar-container">
+
+				<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler">
+					<span class="sr-only">Toggle sidebar</span>
+
+					<span class="icon-bar"></span>
+
+					<span class="icon-bar"></span>
+
+					<span class="icon-bar"></span>
+				</button>
+
+				<!-- /section:basics/sidebar.mobile.toggle -->
+				<div class="navbar-header pull-left">
+					<!-- #section:basics/navbar.layout.brand -->
+					<a href="index.html" class="navbar-brand">
+						<small>
+							<img src="assets/avatars/logo.png" alt="" />
+						</small>
+					</a>
+				</div>
+
+				<!-- /section:basics/navbar.dropdown -->
+			</div><!-- /.navbar-container -->
+		</div>
+<!--上边是logo那块-->
+
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+
+			<!-- #section:basics/sidebar -->
+			<div id="sidebar" class="sidebar responsive">
+
+
+				<ul class="nav nav-list">
+					<li class="active">
+						<a href="index.html">
+							<i class="menu-icon fa fa-tachometer"></i>
+							<span class="menu-text"> 总控制台 </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+					<li class="">
+						<a href="search.html">
+							<i class="menu-icon fa fa-file-o"></i>
+							<span class="menu-text"> 热词搜索 </span>
+						</a>
+						<b class="arrow"></b>
+					</li>
+					<li class="">
+						<a href="wordCloud.html">
+							<i class="menu-icon fa fa-file-o"></i>
+							<span class="menu-text"> 字符云 </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+					<li class="">
+						<a href="links.html">
+							<i class="menu-icon fa fa-file-o"></i>
+							<span class="menu-text"> 关系图 </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+					<li class="">
+						<a href="fenlei.html">
+							<i class="menu-icon fa fa-file-o"></i>
+							<span class="menu-text"> 类别总览 </span>
+						</a>
+						<b class="arrow"></b>
+					</li>
+					<li class="">
+						<a href="search.html">
+							<i class="menu-icon fa fa-file-o"></i>
+							<span class="menu-text"> 下载文档 </span>
+						</a>
+						<b class="arrow"></b>
+					</li>
+				</ul><!-- /.nav-list -->
+
+				<!-- #section:basics/sidebar.layout.minimize -->
+				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+					<i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+				</div>
+
+			</div>
+<!--上边是弹窗那块-->
+
+			<div class="main-content">
+
+				<div class="breadcrumbs" id="breadcrumbs">
+					<ul class="breadcrumb">
+						<li>
+							<i class="ace-icon fa fa-home home-icon"></i>
+							<a href="index.html">大作业首页</a>
+						</li>
+						<li>
+							<a href="search.html">热词解释</a>
+						</li>
+					</ul><!-- /.breadcrumb -->
+
+					<!-- #section:basics/content.searchbox -->
+					<div class="nav-search" id="nav-search">
+						<button class="btn btn-primary" onclick="location='search.html'">前往搜索</button>
+					</div><!-- /.nav-search -->
+
+					<!-- /section:basics/content.searchbox -->
+				</div>
+<!--上边是搜索框那行-->
+
+				<div class="page-content">
+
+					<!-- /section:settings.box -->
+					<div class="page-content-area">
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								
+
+								<hr />
+									<div class="widget-box widget-color-green">
+										<div class="widget-header">
+											<h4 class="widget-title lighter smaller">编程语言</h4>
+										</div>
+										<div class="widget-body">
+											<div class="widget-main padding-8">
+												<button class="btn btn-white btn-info btn-bold" value="java" onclick="gotoLink(value)">
+															java
+														</button>
+														<button class="btn btn-white btn-warning btn-bold"value="python" onclick="gotoLink(value)">
+															python
+														</button>
+														<button class="btn btn-white btn-default btn-round"value="C语言" onclick="gotoLink(value)">
+															C语言
+														</button>
+														
+														<button class="btn btn-white btn-warning btn-bold"value="C++" onclick="gotoLink(value)">
+															C++
+														</button>
+														<button class="btn btn-white btn-info btn-bold"value="C#" onclick="gotoLink(value)">
+															C#
+														</button>
+														<button class="btn btn-white btn-pink btn-round"value="php" onclick="gotoLink(value)">
+															php
+														</button>
+											</div>
+										</div>
+									</div>
+									<div class="widget-box widget-color-green">
+										<div class="widget-header">
+											<h4 class="widget-title lighter smaller">大数据</h4>
+										</div>
+										<div class="widget-body">
+											<div class="widget-main padding-8">
+												<button class="btn btn-white btn-info btn-bold" value="大数据" onclick="gotoLink(value)">
+															大数据
+														</button>
+														<button class="btn btn-white btn-warning btn-bold"value="MapReduce" onclick="gotoLink(value)">
+															MapReduce
+														</button>
+														<button class="btn btn-white btn-default btn-round"value="Hbase" onclick="gotoLink(value)">
+															Hbase
+														</button>
+														<button class="btn btn-white btn-warning btn-bold"value="MongoDB" onclick="gotoLink(value)">
+															MongoDB
+														</button>
+											</div>
+										</div>
+									</div>
+									<div class="widget-box widget-color-green">
+										<div class="widget-header">
+											<h4 class="widget-title lighter smaller">游戏开发</h4>
+										</div>
+										<div class="widget-body">
+											<div class="widget-main padding-8">
+												
+											</div>
+										</div>
+									</div>
+									<div class="widget-box widget-color-green">
+										<div class="widget-header">
+											<h4 class="widget-title lighter smaller">算法</h4>
+										</div>
+										<div class="widget-body">
+											<div class="widget-main padding-8">
+												<button class="btn btn-white btn-info btn-bold" value="动态规划" onclick="gotoLink(value)">
+															动态规划
+														</button>
+														<button class="btn btn-white btn-warning btn-bold"value="贪心算法" onclick="gotoLink(value)">
+															贪心算法
+														</button>
+														<button class="btn btn-white btn-default btn-round"value="DFS" onclick="gotoLink(value)">
+															DFS
+														</button>
+														<button class="btn btn-white btn-warning btn-bold"value="BFS" onclick="gotoLink(value)">
+															BFS
+														</button>
+														<button class="btn btn-white btn-info btn-bold"value="ACM" onclick="gotoLink(value)">
+															ACM
+														</button>
+											</div>
+										</div>
+									</div>
+									<div class="widget-box widget-color-green">
+										<div class="widget-header">
+											<h4 class="widget-title lighter smaller">IT人物</h4>
+										</div>
+										<div class="widget-body">
+											<div class="widget-main padding-8">
+												<button class="btn btn-white btn-info btn-bold" value="马云" onclick="gotoLink(value)">
+															马云
+														</button>
+														<button class="btn btn-white btn-warning btn-bold"value="马化腾" onclick="gotoLink(value)">
+															马化腾
+														</button>
+														<button class="btn btn-white btn-default btn-round"value="李彦宏" onclick="gotoLink(value)">
+															李彦宏
+														</button>
+														
+														<button class="btn btn-white btn-warning btn-bold"value="雷军" onclick="gotoLink(value)">
+															雷军
+														</button>
+											</div>
+										</div>
+									</div>
+									<div class="widget-box widget-color-green">
+										<div class="widget-header">
+											<h4 class="widget-title lighter smaller">其他</h4>
+										</div>
+										<div class="widget-body">
+											<div class="widget-main padding-8">
+												<button class="btn btn-white btn-info btn-bold" value="阿里巴巴" onclick="gotoLink(value)">
+															阿里巴巴
+														</button>
+											</div>
+										</div>
+									</div>
+									
+
+								
+								
+
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content-area -->
+				</div><!-- /.page-content -->
+			</div><!-- /.main-content -->
+
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script type="text/javascript">
+		 window.jQuery || document.write("<script src='assets/js/jquery1x.min.js'>"+"<"+"/script>");
+		</script>
+		<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+		<script src="assets/js/jquery-ui.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/bootbox.min.js"></script>
+
+		<!--<script src="assets/js/ace-elements.min.js"></script>-->
+<!--这上边我把他注释掉了-->
+		<script src="assets/js/ace.min.js"></script>
+		<script type="text/javascript">
+			function gotoLink(text){
+				if(text == ""){
+					window.location.href="search.html";
+				}
+				window.location.href="search.html?content="+encodeURI(text);
+			}
+		</script>
+	</body>
+</html>

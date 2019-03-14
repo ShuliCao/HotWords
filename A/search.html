@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>词语解释</title>
+
+		<meta name="description" content="Common UI Features &amp; Elements" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="assets/css/ace.min.css" id="main-ace-style" />
+	</head>
+
+	<body class="no-skin">
+		<div id="navbar" class="navbar navbar-default">
+			<div class="navbar-container" id="navbar-container">
+
+				<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler">
+					<span class="sr-only">Toggle sidebar</span>
+
+					<span class="icon-bar"></span>
+
+					<span class="icon-bar"></span>
+
+					<span class="icon-bar"></span>
+				</button>
+
+				<!-- /section:basics/sidebar.mobile.toggle -->
+				<div class="navbar-header pull-left">
+					<!-- #section:basics/navbar.layout.brand -->
+					<a href="index.html" class="navbar-brand">
+						<small>
+							<img src="assets/avatars/logo.png" alt="" />
+						</small>
+					</a>
+				</div>
+
+				<!-- /section:basics/navbar.dropdown -->
+			</div><!-- /.navbar-container -->
+		</div>
+<!--上边是logo那块-->
+
+		<!-- /section:basics/navbar.layout -->
+		<div class="main-container" id="main-container">
+
+			<!-- #section:basics/sidebar -->
+			<div id="sidebar" class="sidebar responsive">
+
+
+				<ul class="nav nav-list">
+					<li class="active">
+						<a href="index.html">
+							<i class="menu-icon fa fa-tachometer"></i>
+							<span class="menu-text"> 总控制台 </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+					<li class="">
+						<a href="search.html">
+							<i class="menu-icon fa fa-file-o"></i>
+							<span class="menu-text"> 热词搜索 </span>
+						</a>
+						<b class="arrow"></b>
+					</li>
+					<li class="">
+						<a href="wordCloud.html">
+							<i class="menu-icon fa fa-file-o"></i>
+							<span class="menu-text"> 字符云 </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+					<li class="">
+						<a href="links.html">
+							<i class="menu-icon fa fa-file-o"></i>
+							<span class="menu-text"> 关系图 </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+					<li class="">
+						<a href="fenlei.html">
+							<i class="menu-icon fa fa-file-o"></i>
+							<span class="menu-text"> 类别总览 </span>
+						</a>
+						<b class="arrow"></b>
+					</li>
+					<li class="">
+						<a href="search.html">
+							<i class="menu-icon fa fa-file-o"></i>
+							<span class="menu-text"> 下载文档 </span>
+						</a>
+						<b class="arrow"></b>
+					</li>
+				</ul><!-- /.nav-list -->
+
+				<!-- #section:basics/sidebar.layout.minimize -->
+				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+					<i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+				</div>
+
+			</div>
+<!--上边是弹窗那块-->
+
+			<div class="main-content">
+
+				<div class="breadcrumbs" id="breadcrumbs">
+					<ul class="breadcrumb">
+						<li>
+							<i class="ace-icon fa fa-home home-icon"></i>
+							<a href="index.html">大作业首页</a>
+						</li>
+						<li>
+							<a href="search.html">热词解释</a>
+						</li>
+					</ul><!-- /.breadcrumb -->
+
+					<!-- #section:basics/content.searchbox -->
+					<div class="nav-search" id="nav-search">
+						<span class="input-icon">
+							<input type="text" placeholder="请输入关键字 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+							<i class="ace-icon fa fa-search nav-search-icon"></i>
+						</span>
+						<button class="btn btn-primary" onclick="search()">搜索</button>
+					</div><!-- /.nav-search -->
+
+					<!-- /section:basics/content.searchbox -->
+				</div>
+<!--上边是搜索框那行-->
+
+				<div class="page-content">
+
+					<!-- /section:settings.box -->
+					<div class="page-content-area">
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="widget-box">
+											<div class="widget-header">
+												<h4 class="smaller" >
+													<em id="name"></em>
+													<!--这里是热词的名字-->
+													(<small id="type"></small>)
+												</h4>
+												
+											</div>
+
+											<div class="widget-body">
+												<div class="widget-main">
+													<p class="muted" id="expl">
+														<!--这里是热词的解释-->
+													</p>
+
+
+												</div>
+											</div>
+										</div>
+									</div><!-- /.col -->
+								</div><!-- /.row -->
+
+								
+								
+								<!--<div class="row">
+									<div class="col-sm-12">
+										<h3 class="header smaller lighter green">
+											<i class="ace-icon fa fa-bullhorn"></i>
+											相关词汇
+										</h3>
+
+										<div class="alert alert-info">
+											<button type="button" class="close" data-dismiss="alert">
+												<i class="ace-icon fa fa-times"></i>
+											</button>
+											<strong>普通提示信息</strong>
+
+											这里的样式可以放置系统的普通类型提示信息
+											<br />
+										</div>
+									</div>
+
+								</div>-->
+
+								<hr />
+								<div class="row">
+									<div class="col-sm-12">
+										<!-- #section:elements.tab -->
+										<div class="tabbable">
+											<ul class="nav nav-tabs" id="myTab">
+												<li class="active">
+													<a data-toggle="tab" href="#home">
+														<i class="ace-icon fa fa-book"></i>
+														相关文章
+													</a>
+												</li>
+												<li>
+													<a data-toggle="tab" href="#messages">
+														手动分类
+														<span class="badge badge-danger">4</span>
+													</a>
+												</li>
+											</ul>
+
+											<div class="tab-content">
+												<div id="home" class="tab-pane fade in active">
+													<ol>
+															<li><a href="#" id="a1"></a></li>
+															<li class="text-primary"><a href="#" id="a2"></a></li>
+															<li class="text-danger"><a href="#" id="a3"></a></li>
+															<li class="text-success"><a href="#" id="a4"></a></li>
+															<!--<li class="text-warning">[警告]航展首日：南航宣布加大北美市场投入(2014-11-13)</li>
+															<li class="text-muted">[安静]南航A380双层展台亮相珠海航展(2014-11-12)</li>-->
+													</ol>
+												</div>
+												<div id="messages" class="tab-pane fade">
+													<ul class="list-unstyled spaced">
+														<button class="btn btn-white btn-info btn-bold" value="编程语言" onclick="click1(value)">
+															编程语言
+														</button>
+														<button class="btn btn-white btn-warning btn-bold"value="大数据" onclick="click1(value)">
+															大数据
+														</button>
+														<button class="btn btn-white btn-default btn-round"value="游戏开发" onclick="click1(value)">
+															游戏开发
+														</button>
+														
+														<button class="btn btn-white btn-warning btn-bold"value="算法" onclick="click1(value)">
+															算法
+														</button>
+														<button class="btn btn-white btn-info btn-bold"value="IT人物" onclick="click1(value)">
+															IT人物
+														</button>
+														<button class="btn btn-white btn-pink btn-round"value="其他" onclick="click1(value)">
+															其他
+														</button>
+
+													</ul>
+												</div>
+
+
+											</div>
+										</div>
+
+										<!-- /section:elements.tab -->
+									</div><!-- /.col -->
+
+								</div><!-- /.row -->
+
+								
+								
+
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content-area -->
+				</div><!-- /.page-content -->
+			</div><!-- /.main-content -->
+
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script type="text/javascript">
+		 window.jQuery || document.write("<script src='assets/js/jquery1x.min.js'>"+"<"+"/script>");
+		</script>
+		<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+		<script src="assets/js/jquery-ui.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/bootbox.min.js"></script>
+
+		<!--<script src="assets/js/ace-elements.min.js"></script>-->
+<!--这上边我把他注释掉了-->
+		<script src="assets/js/ace.min.js"></script>
+		<script type="text/javascript">
+			var jc = null;
+			init();
+			function init(){
+				var theRequest = new Object();
+				var url = location.search;
+	   			if (url.indexOf("?") != -1) {
+	     			var str = url.substr(1);
+	     			strs = str.split("&");
+	      			for(var i = 0; i < strs.length; i ++) {
+	        			theRequest[strs[i].split("=")[0]]=(strs[i].split("=")[1]);
+	      			}
+	   			}
+	   			var cc = theRequest['content'];
+	   			jc = decodeURI(cc);
+	   			if(jc != null){
+	   				search();
+	   			}
+			};
+			function search(){
+				$.ajaxSetup({
+					cache:false
+				});
+				$.ajax({
+					type:"get",
+					dataType:"JSON",
+					url:"http://127.0.0.1:8081/Dazuoye/SearchServlet",
+					data:{
+						name1:jc,
+						name2:$("input[id='nav-search-input']").val()
+					},
+					async:true,
+					success:function(json){
+						$("#name").text(json.name);
+						$("#expl").text(json.expl);
+						$("#type").text(json.type);
+						$("#a1").html(json.title1);
+						$("#a1").attr("href",json.a1);
+						$("#a2").html(json.title2);
+						$("#a2").attr("href",json.a2);
+						$("#a3").html(json.title3);
+						$("#a3").attr("href",json.a3);
+						$("#a4").html(json.title4);
+						$("#a4").attr("href",json.a4);
+					}
+				});
+			};
+			function click1(t){
+				$.ajaxSetup({
+					cache:false
+				});
+				$.ajax({
+					type:"get",
+					dataType:"JSON",
+					url:"http://127.0.0.1:8081/Dazuoye/FenleiServlet",
+					
+					data:{
+						name:$("input[id='nav-search-input']").val(),
+						type:t,
+					},
+					async:true,
+					success:function(tt){
+						$("#type").text(tt.type);
+					}
+				});
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+{
+	"index.html": {
+		"refer": [
+			"page-builder-2.html",
+			"typography.html",
+			"wordCloud.html"
+		],
+		"resources": [
+			"assets/avatars/logo.png",
+			"assets/avatars/user.jpg"
+		]
+	},
+	"wordCloud.html": {
+		"refer": [
+			"index.html",
+			"profile.html",
+			"calendar.html"
+		],
+		"resources": [
+			"assets/avatars/logo.png",
+			"assets/avatars/user.jpg"
+		]
+	},
+	"profile.html": {
+		"resources": [
+			"assets/avatars/avatar1.png",
+			"assets/avatars/avatar3.png",
+			"assets/avatars/logo.png",
+			"assets/avatars/avatar.png",
+			"assets/avatars/user.jpg",
+			"assets/avatars/avatar2.png",
+			"assets/avatars/avatar5.png",
+			"assets/avatars/avatar4.png",
+			"assets/avatars/profile-pic.jpg"
+		]
+	},
+	"calendar.html": {
+		"refer": [
+			"index.html"
+		]
+	}
+}
